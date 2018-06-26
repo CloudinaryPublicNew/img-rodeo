@@ -1,0 +1,7 @@
+{ "dependencies": {
+   "express": "4.x",
+   "webtask-tools": "3.x",
+   "request": "2.x",
+   "cloudinary": "1.x"
+ }
+}

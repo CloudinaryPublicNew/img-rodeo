@@ -14,15 +14,18 @@ const addTransformations = function( cldUrl, transformations ) {
 	return cldUrl.replace( /(v\d{10})/, transformations + '/$1' );
 }
 
-app.get('/:size', function ( req, res ) {
+app.get('*?/:size', function ( req, res ) {
 
 	const s = req.params.size.split( 'x' );
 	const width = s[ 0 ];
 	const height = s[ 1 ];
-	const transformations = req.query.t;
-	const folder = req.query.f;
+	let transformations = req.params[0];
+	if ( transformations && transformations.charAt( 0 ) === '/' ) {
+		transformations = transformations.slice( 1 ); // remove leading /
+	}
+	const folder = req.query.folder;
 	const defaultColors = [ 'rgb:56cbb7', 'rgb:5ac8ce', 'rgb:6dc3e2', 'rgb:85bcf0', 'rgb:9fb3f7', 'rgb:b7aaf8', 'rgb:cca1f0', 'rgb:de99e1', 'rgb:ed93ca', 'rgb:f690ad', 'rgb:f9928d', 'rgb:f59770', 'rgb:e9a15a', 'rgb:d6ac50', 'rgb:bcb856', 'rgb:9ec168', 'rgb:80c881', 'rgb:65cb9c' ];
-	const colors = ( req.query.c ? req.query.c.split( ',' ) : defaultColors );
+	const colors = ( req.query.colors ? req.query.colors.split( ',' ) : defaultColors );
 	
 	const getUrl = ( function() {
 		return new Promise( function( resolve, reject ) {
@@ -61,7 +64,7 @@ app.get('/:size', function ( req, res ) {
 				resolve( 
 					addTransformations(
 						oneTransparentPixel,
-						`b_${ randomItem( colors ) },w_${ width },h_${ height }/$w_w,$h_h,co_rgb:00000080,l_text:Roboto_${ textSize }:$(w)%20×%20$(h)`
+						`b_${ randomItem( colors ) },w_${ width },h_${ height }/$w_w,$h_h,co_rgb:00000080,l_text:Roboto_${ textSize }:$(w)${ encodeURIComponent( ' × ' ) }$(h)`
 					)
 				);
 
@@ -73,6 +76,7 @@ app.get('/:size', function ( req, res ) {
 	getUrl().then( ( url ) => {
 
 		let theUrl;
+		
 		if ( transformations ) {
 			theUrl = addTransformations( url, transformations );
 		} else {

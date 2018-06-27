@@ -2,14 +2,14 @@
 
 An image placeholder service like [placehold.it](https://placehold.it), [placekitten](https://placekitten.com), and [placebeyonce](https://placebeyonce.com) – powered by Cloudinary.
 
-### todo
+## todo
 
 - [ ] hook this up to the https://img.rodeo domain that I just purchased
 - [ ] some form of caching on folder lists?
 - [ ] front-end examples
+- [ ] document setup on webtask
 
-
-### examples
+## examples
 
 Basic usage:
 
@@ -32,4 +32,8 @@ So instead of being limited to placebeyonce or placekitten, I can place whatever
 Cherry on top, you can transform these URLs like any Cloudinary URL:
 
 ![https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/e_art:fes,r_max/200x200?folder=israel-sept-2016](https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/e_art:fes,r_max/200x200?folder=israel-sept-2016)
+
+## installation
+
+It runs on Webtask...
 

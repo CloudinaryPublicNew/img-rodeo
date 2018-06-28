@@ -14,7 +14,7 @@ An image placeholder service like [placehold.it](https://placehold.it), [placeki
 Basic usage:
 
 ```
-/300x200
+https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200
 ```
 ![](https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200)
 
@@ -22,14 +22,14 @@ Basic usage:
 By default, it randomly selects one out of a pre-defined pallete of 18 colors. You can also specify a custom color:
 
 ```
-/300x200?colors=tomato
+https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200?colors=tomato
 ```
 ![](https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200?colors=tomato)
 
 Or a custom palette, to choose randomly from:
 
 ```
-/300x200?colors=tomato,rgb:fab123,steelblue
+https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200?colors=tomato,bisque,steelblue
 ```
 
 ![](https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200?colors=tomato,bisque,steelblue)
@@ -37,7 +37,7 @@ Or a custom palette, to choose randomly from:
 The *really* cool thing though, is that I can hook it up to folders in my Cloudinary account, which it'll pull random images out of:
 
 ```
-/300x200?folder=israel-sept-2016
+https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200?folder=israel-sept-2016
 ```
 
 ![](https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200?folder=israel-sept-2016)
@@ -47,7 +47,7 @@ So instead of choosing between placebeyonce and placekitten, I can place whateve
 Cherry on top, you can transform these URLs like any Cloudinary URL:
 
 ```
-/e_art:fes,r_max/200x200?folder=israel-sept-2016
+https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/e_art:fes,r_max/200x200?folder=israel-sept-2016
 ```
 
 ![](https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/e_art:fes,r_max/200x200?folder=israel-sept-2016)

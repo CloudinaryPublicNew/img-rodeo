@@ -19,17 +19,17 @@ Basic usage:
 ![](https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200)
 
 
-By default, it randomly selects one out of a pre-defined pallete of 18 colors. Can also use a custom color:
+By default, it randomly selects one out of a pre-defined pallete of 18 colors. You can also specify a custom color:
 
 ```
 /300x200?colors=tomato
 ```
 ![](https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200?colors=tomato)
 
-Or a custom palette:
+Or a custom palette, to choose randomly from:
 
 ```
-/300x200?colors=tomato,bisque,steelblue
+/300x200?colors=tomato,rgb:fab123,steelblue
 ```
 
 ![](https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200?colors=tomato,bisque,steelblue)

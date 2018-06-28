@@ -29,10 +29,10 @@ https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200?colors=toma
 Or a custom palette, to choose randomly from:
 
 ```
-https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200?colors=tomato,bisque,steelblue
+https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200?colors=tomato,rgb:fab123,steelblue
 ```
 
-![](https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200?colors=tomato,bisque,steelblue)
+![](https://evangelism-eric.cloudinary.auth0-extend.com/imgrodeo/300x200?colors=tomato,rgb:fab123,steelblue)
 
 The *really* cool thing though, is that I can hook it up to folders in my Cloudinary account, which it'll pull random images out of:
 
